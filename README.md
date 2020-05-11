@@ -30,3 +30,8 @@ Cross-platform services in a network
 9. Reboot der VM
 10. Apache testen im Web (http://127.0.0.1:80)
 11. VM herunterfahren, wenn alles funktioniert hat.
+
+### Vagrant
+Da die Steps mit VirtualBox un einer VM sehr lange dauern können. Vorallem das installieren von Ubuntu, gibt es Abhilfe. Diese heisst Vagrant. Es ist eine freie Ruby-Anwendung zur Erstellung und Verwaltung virtueller Maschinen und ermöglicht einfache Softwareverteiling.
+
+Vagrant kann man auf der offiziellen Webseite heruntergeladen werden. (https://vagrantup.com)
