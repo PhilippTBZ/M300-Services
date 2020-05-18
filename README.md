@@ -43,3 +43,8 @@ Sobald man Vagrant installiert hat, kann man in einen Ordner gehen und in diesem
 Danach kann man entweder die VM benutzten durch VirtualBox oder man kann via SSH auf die Maschine verbinden. Dies kann man mit dem Befehl `vagrant ssh` machen (solangen man in dem Ordner der VM ist). Da man dann verbunden ist mit der VM, kann man auch ganz normal die Bash-Befehle benutzen.
 
 ## Infrastruktur (20-Infrastruktur)
+### Cloud Computing
+#### Infrastruktur - Infrastructure as a Service (IaaS)
+#### Plattform - Platform as a Service (PaaS)
+#### Anwendung - Software as a Service (SaaS)
+#### Container - Container as a Service (CaaS)
