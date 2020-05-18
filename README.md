@@ -1,12 +1,10 @@
 # M300-Services
-
-Für Upload auf Github:
-`git commit -a -m "Update 18.05"`
-`git push`
-
 Cross-platform services in a network
 ======
 ## Setup Toolumgebung (10-Toolumgebung)
+Für Upload auf Github:
+* `git commit -a -m "Update 18.05"`
+* `git push`
 ### Github
 1. Repository erstellen auf Github
 2. `git clone` von der Repository
