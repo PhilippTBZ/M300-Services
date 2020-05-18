@@ -52,3 +52,18 @@ Der Entwickler erstellt die Anwendung und lädt diese in die Cloud. Der kümmert
 Die Anwendungssicht stellt die abstrakteste Sicht auf Cloud-Dienste dar. Hierbei bringt der Benutzer seine Applikation weder in die Cloud ein, noch muss er sich um Skalierbarkeit oder Datenhaltung kümmern. Er nutzt eine bestehende Applikation, die ihm die Cloud nach aussen hin anbietet.
 #### Container - Container as a Service (CaaS)
 Diese Ebene ist dafür zuständig, containerisierten Workload auf den Ressourcen auszuführen, die eine IaaS-Cloud zur Verfügung stellt. Die Technologien dieser Ebene wie Docker, Kubernetes oder Mesos sind allesamt quelloffen verfügbar. Somit kann man sich seine private Cloud ohne Gefahr eines Vendor Lock-ins aufbauen.
+#### Infrastructure as Code
+Infracstructure as Code (IaC) ist eine konsistene und wiederholbare Definition fpr die Bereitstellung von Systemen sowie auch deren Konfiguration.
+Bei IaC gibt es verschiedene Best Practies:
+1. Versionsverwaltung - Version Control Systems (VCS)
+2. Testgetriebene Entwicklung - Testdriven Developmen (TDD)
+3. Kontinuierliche Integration - Continuous Integration (CI)
+4. Kontinuierliche Verteilung - Continuous Delivery (CD)
+
+Die meiner Meinung nach wichtigesten Ziele von "IaC" sind:
+*  IT-Infrastruktur wird unterstützt und ermöglicht Veränderung, anstatt Hindernis oder Einschränkung zu sein.
+*  Fachanwender erstellen und verwalten ihre IT-Ressourcen, die sie benötigen, ohne IT-Mitarbeiter
+*  Teams sind in der Lage, einfach und schnell, ein abgestürztes System wiederherzustellen.
+*  Verbesserungen sind kontinuierlich und keine teuren und riskanten "Big Bang" Projekte.
+
+### Vagrant
