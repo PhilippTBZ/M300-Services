@@ -45,6 +45,10 @@ Danach kann man entweder die VM benutzten durch VirtualBox oder man kann via SSH
 ## Infrastruktur (20-Infrastruktur)
 ### Cloud Computing
 #### Infrastruktur - Infrastructure as a Service (IaaS)
+Mit der Infrastruktur stelt man die unterste Schicht im Cloud Computing dar. Hier greift der Benutzer auf die Dienste innerhalb des eigentlichen Systems. Es verwaltet die VMs weitestgehend selber.
 #### Plattform - Platform as a Service (PaaS)
+Der Entwickler erstellt die Anwendung und lädt diese in die Cloud. Der kümmert sich dann um die Aufteilungder Verarbeitungeinheiten. Hier hat der Benutzer einfach keinen direkten Zugriff auf die VMs. Sowie auch betriebt er die virtuellen Server nicht. 
 #### Anwendung - Software as a Service (SaaS)
+Die Anwendungssicht stellt die abstrakteste Sicht auf Cloud-Dienste dar. Hierbei bringt der Benutzer seine Applikation weder in die Cloud ein, noch muss er sich um Skalierbarkeit oder Datenhaltung kümmern. Er nutzt eine bestehende Applikation, die ihm die Cloud nach aussen hin anbietet.
 #### Container - Container as a Service (CaaS)
+Diese Ebene ist dafür zuständig, containerisierten Workload auf den Ressourcen auszuführen, die eine IaaS-Cloud zur Verfügung stellt. Die Technologien dieser Ebene wie Docker, Kubernetes oder Mesos sind allesamt quelloffen verfügbar. Somit kann man sich seine private Cloud ohne Gefahr eines Vendor Lock-ins aufbauen.
