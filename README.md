@@ -78,3 +78,6 @@ vagrant status | Zeigt den aktuellen Status der VM an
 vagrant port | Zeigt die Weitergeleiteten Ports der VM an
 vagrant halt | Stoppt die laufende Virtuelle Maschine
 vagrant destroy | Stoppt die Virtuelle Maschine und zerstört sie.
+
+### Packer
+Packer ist eine Tool, welches man benutzen kann für die Erstellung von Images mittels einer Konfigurationdatei. Packer wird über die Kommandozeile bedient, bei dem der wichtigste Befehl `packer build` ist. 
