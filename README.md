@@ -35,3 +35,10 @@ Cross-platform services in a network
 Da die Steps mit VirtualBox un einer VM sehr lange dauern können. Vorallem das installieren von Ubuntu, gibt es Abhilfe. Diese heisst Vagrant. Es ist eine freie Ruby-Anwendung zur Erstellung und Verwaltung virtueller Maschinen und ermöglicht einfache Softwareverteiling.
 
 Vagrant kann man auf der offiziellen Webseite heruntergeladen werden. (https://vagrantup.com)
+
+Sobald man Vagrant installiert hat, kann man in einen Ordner gehen und in diesem die folgenden Commands mit Hilfe vom Bash ausführen:
+1. `vagrant init ubuntu/xenial64` --> *Vagrant file erzeugen*
+2. `vagrant up --provider virtualbox` --> *Virtuelle Maschine erstellen & starten*
+
+Danach kann man entweder die VM benutzten durch VirtualBox oder man kann via SSH auf die Maschine verbinden. Dies kann man mit dem Befehl `vagrant ssh` machen (solangen man in dem Ordner der VM ist). Da man dann verbunden ist mit der VM, kann man auch ganz normal die Bash-Befehle benutzen.
+
