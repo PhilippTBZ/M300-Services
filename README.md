@@ -6,7 +6,7 @@ Linux ist ein Kernel, welcher für andere Betriebssysteme zur Verfügung gestell
 
 Da man bei Linux eigentlich immer in der Kosole arbeitet, ist es gut wenn man die wichtigesten Befehle auswendig kennt.
 
-* ch --> Wechselt in ein Unterverzeichnis
+* cd --> Wechselt in ein Unterverzeichnis
 * touch --> Zugriffs-/Änderungs-Timestamp von Datein ändern
 * mkdir --> Erstellt ein Verzeichnis
 * chown --> Owner wechseln
