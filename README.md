@@ -70,14 +70,16 @@ Durch Git ergeben sich für die Benutzer folgende Möglichkeiten auf der Reposit
 Markdown ist eine Aufzeichnungssprache, welche 2004 entwickelt wurde. Das Ziel von Markdown ist es ein Format zu haben, welches in jedem Editor geschrieben und gelesen werden kann. Diese Dokumentation wird mit Hilfe von Markdown und Visual Studio Code geschrieben.
 
 ## Setup Toolumgebung (10-Toolumgebung)
-Für Upload auf Github:
-* `git commit -a -m "Update 18.05"`
-* `git push`
+
 ### Github
 1. Repository erstellen auf Github
 2. `git clone` von der Repository
 3. `git config --global user.name "PhilippTBZ"`
 4. `git config --global user.email "philipp.hofmann@edu.tbz.ch"`
+
+Für einen Upload auf Github:
+* `git commit -a -m "Text"`
+* `git push`
 
 ### VM
 #### Erstellung der VM
