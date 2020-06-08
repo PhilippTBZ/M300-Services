@@ -47,6 +47,27 @@ höhere Ressourcenverbrauch. Für die Hardwareschnittstellen werden Emulationen 
 gestellt. Dies bedeutet, dass man Hardware wie GPU oder Netzwerkkarten nicht physisch vorliegen
 muss. Die bekanntesten Produkte in der Virtualisierung mit Typ-2 sind „VM Ware“ und „Virtual Box“. 
 
+## Vagrant
+Vagrant ist ein Programm, mit welchem man effizient virtuelle Maschinen aufsetzen kann. Diese lassen sich anhand eines Vagrantfiles starten. In diesem File kann man auch direkt alle Konfigurationsschritte eingeben, welche dann beim Start der virtuellen Maschine gemacht werden. 
+
+Die wichtigen Befehle für Vagrant sind die folgenden:
+* `vagrant init` --> erstellt eine VM
+* `vagrant up` --> startet die VM
+* `vagrant status` --> zeigt den Status der VM an
+* `vagrant ssh` --> Verbindet sich per SSH mit der VM
+* `vagrant destroy -f` --> löscht die VM
+* `vagrant halt` --> stoppt die VM
+
+## Git
+Git ist ein Programm, welches von Linus Torvalds entwickelt wurde. Durch dieses Programm, ermöglicht es Benutzer gleichzeitig Dateien zu bearbeiten ohne Probleme und ohne das überschreiben von anderen.
+
+Durch Git ergeben sich für die Benutzer folgende Möglichkeiten auf der Repository:
+* Integration der eigenen Arbeit
+* Arbeiten gehen nicht verloren / überschrieben
+* Jeder kann gleichzeitig Arbeiten
+
+## Markdown
+Markdown ist eine Aufzeichnungssprache, welche 2004 entwickelt wurde. Das Ziel von Markdown ist es ein Format zu haben, welches in jedem Editor geschrieben und gelesen werden kann. Diese Dokumentation wird mit Hilfe von Markdown und Visual Studio Code geschrieben.
 
 ## Setup Toolumgebung (10-Toolumgebung)
 Für Upload auf Github:
