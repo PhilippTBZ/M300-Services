@@ -1,6 +1,53 @@
 # M300-Services
 Cross-platform services in a network
 ======
+## Linux
+Linux ist ein Kernel, welcher für andere Betriebssysteme zur Verfügung gestellt wird. Man kann aber auch selber diesen Kernel erweitern und verbessern, da Linux Open-Source ist.
+
+Da man bei Linux eigentlich immer in der Kosole arbeitet, ist es gut wenn man die wichtigesten Befehle auswendig kennt.
+
+* ch --> Wechselt in ein Unterverzeichnis
+* touch --> Zugriffs-/Änderungs-Timestamp von Datein ändern
+* mkdir --> Erstellt ein Verzeichnis
+* chown --> Owner wechseln
+* chgroup --> Gruppe wechseln
+* chmod --> Berechtigungen wechseln
+* nano/vi/vim "Filename" --> Datei öffnen zum bearbeiten
+
+## Virtualisierung
+### Virtuelle Maschine
+Eine VM (virtuelle Maschine) kann man eigentlich von jedem Betriebssystem des Hosts laufen lassen,
+sei es Windows, Linux oder Mac-OS. Das Erstellen eines anderen Betriebssystems, wie zum Beispiel
+eine Linux VM, auf einem Windows Host funktioniert genau gleich wie, wenn es das gleiche
+Betriebssystem ist, man braucht einfach eine andere ISO-Datei. Ob es aber empfehlenswert ist auf
+einem „schlechten“ Computer VMs laufen zu lassen ist die andere Frage. Da man die CPU und das
+RAM des Hosts verwendet, wenn zu wenig beim Host hat, kann es zu Standbildern / Verzögerungen
+kommen, da die Hardware dann zu stark ausgelastet ist.
+
+### Hypervisor
+Der Hypervisor ist eine Schnittstelle zwischen der virtuellen Maschine und dem Host Computer mit
+dem darunter liegenden Hardwarekomponenten. Bei den Hypervisoren wird unter zwei Typen
+unterschieden.
+
+#### Hypervisor Typ 1
+Da der Typ-1 sehr nah an der Hardware läuft braucht man kein umfangreiches Betriebssystem auf
+dem dieser betrieben wird. Die meisten Komponenten werden beim Typ-1 in der VM selber
+ausgeführt und benötigt darum wenig Ressourcen für die eigene Ausführung. Da man mit diesem Typ
+sehr schnell arbeiten kann, wird dieser meistens bei Server-Virtualisierung verwendet. Bei dieser
+Lösung hat es Nachteile. Einer sind die besonderen Hardwareanforderungen. Sowie auch wird nicht
+jeder Treiber von der Bare-Metal-Lösung unterstützt. 
+
+#### Hypervisor Typ 2
+Beim Typ-2 braucht man ein Basis-Betriebssystem, dies braucht man beim Typ-1 nicht. Theoretisch
+kann man diese Lösung beschreiben wie ein Programm, welches in das Betriebssystem installiert &
+ausgeführt wird, daher wird es „Hosted Lösung“ genannt. Der Typ-2 Hypervisor kann somit auf vielen
+gängigen Betriebssystemen installiert und genutzt werden, da dieser keine spezielle Hardware
+benötigt und Inkompatibilitäten hierbei sehr selten Auftreten. Der Nachteil bei dieser Lösung ist, der
+höhere Ressourcenverbrauch. Für die Hardwareschnittstellen werden Emulationen zur Verfügung
+gestellt. Dies bedeutet, dass man Hardware wie GPU oder Netzwerkkarten nicht physisch vorliegen
+muss. Die bekanntesten Produkte in der Virtualisierung mit Typ-2 sind „VM Ware“ und „Virtual Box“. 
+
+
 ## Setup Toolumgebung (10-Toolumgebung)
 Für Upload auf Github:
 * `git commit -a -m "Update 18.05"`
