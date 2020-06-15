@@ -13,6 +13,7 @@ Da man bei Linux eigentlich immer in der Kosole arbeitet, ist es gut wenn man di
 * chgroup --> Gruppe wechseln
 * chmod --> Berechtigungen wechseln
 * nano/vi/vim "Filename" --> Datei öffnen zum bearbeiten
+* tail -10f --> letzte 10 Einträge im File & fortlaufend
 
 ## Virtualisierung
 ### Virtuelle Maschine
