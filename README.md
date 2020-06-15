@@ -70,6 +70,12 @@ Durch Git ergeben sich für die Benutzer folgende Möglichkeiten auf der Reposit
 ## Markdown
 Markdown ist eine Aufzeichnungssprache, welche 2004 entwickelt wurde. Das Ziel von Markdown ist es ein Format zu haben, welches in jedem Editor geschrieben und gelesen werden kann. Diese Dokumentation wird mit Hilfe von Markdown und Visual Studio Code geschrieben.
 
+## Wissensstand
+Ich kenne mich in Linux meiner Meinung nach eigentlich ziemlich gut aus, da ich seit 1 Jahr im Betrieb sogut wie nur mit Linux arbeite. Die Standard Linux Befehle sollten daher keine Schwierigkeit ergeben, und sonst gibt es immer noch Google. Ich arbeite aber in diesem Modul zum eigentlich ersten Mal mit VirtualBox, sonst habe ich immer mit VMWare gearbeitet. Wir hatten in der UBS ein ÜK bei dem wir kurz eine VM aus VMWare in VirtualBox kopiert haben, einfach zum schauen/überprüfen das dies möglich ist. Sonst habe ich aber lieber VMWare benutzt, da es für mich einfacher ist. Ich habe mich bis jetzt auch noch nicht mit Github wirklich auseinander gesetzt und eine eigene Repository erstellt. Daher kannte ich auch Markdown nicht. Hört sich aber ziemlich interessant an, da man mit jedem Editor in dieser "Sprache" schreiben und interagieren kann.
+
+## Reflexion
+Ich bin eigentlich sehr zufrienden mit dem Modul, auch wenn ich nicht alles auf anhieb verstanden habe, oder gemacht habe. Da mir eifach die Zeit gefehlt hat. Die einzigen Probleme hatte ich eigentlich mit Vagrant, da ich dieses Programm nicht wirklich verstanden habe. Ich brauchte zuerst noch ein bisschen Hilfe von Kollegen und dem Internet. Jedoch hoffe ich, dass ich trotzdem eine gute Note bekommen kann, oder wenigstens jetzt die Grundlagen für LB3 habe. Zudem muss ich auch sagen bin ich ein bisschen froh, wenn dieses Modul um ist, da ich nicht wirklich der Fan von Vagrant bin. Es ist ja schön, dass es eine solche Möglichkeit gibt, aber ich kenne von meiner Stelle nur so viel, dass man die Server nicht immer wieder neu aufsetzen muss. Was noch dazu kommt ist, dass wir in der UBS eigene Commands haben, welche wir brauchen um einen Server aufzusetzen wenn das mal der Fall ist. Und ich weiss nicht ob dies möglich ist, auch diese Custom Commands dort einzugeben, oder ob Vagrant dann ein Problem damit hat.
+
 ## Setup Toolumgebung (10-Toolumgebung)
 
 ### Github
@@ -116,31 +122,6 @@ Sobald man Vagrant installiert hat, kann man in einen Ordner gehen und in diesem
 
 Danach kann man entweder die VM benutzten durch VirtualBox oder man kann via SSH auf die Maschine verbinden. Dies kann man mit dem Befehl `vagrant ssh` machen (solangen man in dem Ordner der VM ist). Da man dann verbunden ist mit der VM, kann man auch ganz normal die Bash-Befehle benutzen.
 
-## Infrastruktur (20-Infrastruktur)
-### Cloud Computing
-#### Infrastruktur - Infrastructure as a Service (IaaS)
-Mit der Infrastruktur stelt man die unterste Schicht im Cloud Computing dar. Hier greift der Benutzer auf die Dienste innerhalb des eigentlichen Systems. Es verwaltet die VMs weitestgehend selber.
-#### Plattform - Platform as a Service (PaaS)
-Der Entwickler erstellt die Anwendung und lädt diese in die Cloud. Der kümmert sich dann um die Aufteilungder Verarbeitungeinheiten. Hier hat der Benutzer einfach keinen direkten Zugriff auf die VMs. Sowie auch betriebt er die virtuellen Server nicht. 
-#### Anwendung - Software as a Service (SaaS)
-Die Anwendungssicht stellt die abstrakteste Sicht auf Cloud-Dienste dar. Hierbei bringt der Benutzer seine Applikation weder in die Cloud ein, noch muss er sich um Skalierbarkeit oder Datenhaltung kümmern. Er nutzt eine bestehende Applikation, die ihm die Cloud nach aussen hin anbietet.
-#### Container - Container as a Service (CaaS)
-Diese Ebene ist dafür zuständig, containerisierten Workload auf den Ressourcen auszuführen, die eine IaaS-Cloud zur Verfügung stellt. Die Technologien dieser Ebene wie Docker, Kubernetes oder Mesos sind allesamt quelloffen verfügbar. Somit kann man sich seine private Cloud ohne Gefahr eines Vendor Lock-ins aufbauen.
-#### Infrastructure as Code
-Infracstructure as Code (IaC) ist eine konsistene und wiederholbare Definition fpr die Bereitstellung von Systemen sowie auch deren Konfiguration.
-Bei IaC gibt es verschiedene Best Practies:
-1. Versionsverwaltung - Version Control Systems (VCS)
-2. Testgetriebene Entwicklung - Testdriven Developmen (TDD)
-3. Kontinuierliche Integration - Continuous Integration (CI)
-4. Kontinuierliche Verteilung - Continuous Delivery (CD)
-
-Die meiner Meinung nach wichtigesten Ziele von "IaC" sind:
-*  IT-Infrastruktur wird unterstützt und ermöglicht Veränderung, anstatt Hindernis oder Einschränkung zu sein.
-*  Fachanwender erstellen und verwalten ihre IT-Ressourcen, die sie benötigen, ohne IT-Mitarbeiter
-*  Teams sind in der Lage, einfach und schnell, ein abgestürztes System wiederherzustellen.
-*  Verbesserungen sind kontinuierlich und keine teuren und riskanten "Big Bang" Projekte.
-
-### Vagrant
 Die wichtigsten Befehle von Vagrant sind:
 
 Befehl | Beschreibung
@@ -154,4 +135,22 @@ vagrant halt | Stoppt die laufende Virtuelle Maschine
 vagrant destroy | Stoppt die Virtuelle Maschine und zerstört sie.
 
 ### Packer
-Packer ist eine Tool, welches man benutzen kann für die Erstellung von Images mittels einer Konfigurationdatei. Packer wird über die Kommandozeile bedient, bei dem der wichtigste Befehl `packer build` ist. 
+Packer ist eine Tool, welches man benutzen kann für die Erstellung von Images mittels einer Konfigurationdatei. Packer wird über die Kommandozeile bedient, bei dem der wichtigste Befehl `packer build` ist.
+
+### Sicherheitsaspekte
+In der folgenden Tabelle kann man die eingerichteten Rules der Firewall sehen kann.
+
+Source/Destionation | Hostsystem | WAN | Database | Webserver
+-------- | -------- | -------- | -------- | -------- | --------
+Hostsystem | x | any | 22/TCP | 22/TCP
+WAN | - | x | - | - 
+Database | - | any | x | -
+Webserver | - | any | - | x
+
+### Zugang mit SSH-Tunnel
+Nein, es SSH-Tunnel ist nicht eingerichtet. Da SSH nur von Hostsystem bis auf die VM erlaubt ist, wurden die Firewall Rules erstellt. 
+
+### Sicherheitsmassnahmen
+* UFW ist Standard auf Deny gestellt.
+* Nur gebrauchte Ports sind geöffnet
+
